@@ -1,0 +1,60 @@
+@import "../../styles/variables";
+
+.heroSection {
+  position: static;
+  width: 100vw;
+  height: 94vh;
+  & .wrapper {
+    display: grid;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 1.6rem;
+    grid-template-columns: 1fr 1fr;
+    height: 90%;
+    width: 100%;
+    margin-top: 5vh;
+    & .simonPicture {
+      position: relative;
+      width: 100%;
+      height: 85vh;
+      background-image: url("https://scontent-los2-1.xx.fbcdn.net/v/t1.15752-9/136046847_153062883254070_7263012050943105863_n.jpg?_nc_cat=110&ccb=2&_nc_sid=ae9488&_nc_ohc=Ku7Nu868lOwAX__PAMp&_nc_ht=scontent-los2-1.xx&oh=fff938bb572667d63e3232e7a26dd4c8&oe=6011AB3E");
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(24, 24, 36, 0.5);
+      }
+    }
+    & .heroBody {
+      margin-left: -6.4rem;
+      z-index: 1;
+      align-self: center;
+      & h1 {
+        font-size: 6.8rem;
+        line-height: 9rem;
+        margin-bottom: 3rem;
+
+        span {
+          color: $portfolioColor;
+        }
+      }
+
+      & p {
+        font-size: 1.8rem;
+        line-height: 3rem;
+      }
+    }
+  }
+  & .heroBg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65vw;
+    height: 110vh;
+    background-image: $heroLinearGradient;
+    z-index: -1;
+  }
+}
